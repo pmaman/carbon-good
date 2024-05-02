@@ -7,14 +7,20 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import Stack from '@mui/material/Stack';
 import {Link} from 'react-router-dom';
 
-const pages = ['About', 'Atlas'];
+//import CustIcon from './CustIcon';
+import CGIcon from '../Logo/hccas-01.png';
+import GitIcon from '../Logo/github-mark.png';
+import DiscIcon from '../Logo/icon_clyde_black_RGB.png';
+
+
+const pages = ['about', 'atlas'];
 const settings = ['sett1', 'sett2'];
 
 function ResponsiveAppBar() {
@@ -37,15 +43,32 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          <Box
+              sx={{
+                  backgroundImage: `url(${CGIcon})`,
+                  backgroundRepeat: 'no-repeat',
+                  backgroundPosition: 'center',
+                  backgroundSize: '100%',
+                  width: '25px',
+                  height: '45px'
+              }}
+          >
+          </Box>
+          <Box
+            sx={{
+              width:'20px',
+              height:'20px',
+            }}
+          >
+          </Box>
           <Typography
             variant="h6"
             noWrap
             component="a"
-            href="/"
+            href="/about"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -58,7 +81,6 @@ function ResponsiveAppBar() {
           >
             CarbonGood
           </Typography>
-
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
@@ -91,7 +113,7 @@ function ResponsiveAppBar() {
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">
-                    <Link style={{textDecoration:'none'}} to={`/${page}`}>{page}</Link>
+                    <Link style={{textDecoration:'none', color: '#000000'}} to={`/${page}`}>{page}</Link>
                 </Typography>
                 </MenuItem>
               ))}
@@ -102,7 +124,7 @@ function ResponsiveAppBar() {
             variant="h5"
             noWrap
             component="a"
-            href="#app-bar-with-responsive-menu"
+            href="/about"
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
@@ -123,7 +145,7 @@ function ResponsiveAppBar() {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                <Link style={{textDecoration:'none'}} to={`/${page}`}>{page}</Link>
+                <Link style={{textDecoration:'none', color: '#ffffff'}} to={`/${page}`}>{page}</Link>
               </Button>
             ))}
           </Box>
@@ -131,7 +153,30 @@ function ResponsiveAppBar() {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+              <Stack direction="row" spacing={2}>
+                <Box
+                  sx={{
+                      backgroundImage: `url(${GitIcon})`,
+                      backgroundRepeat: 'no-repeat',
+                      backgroundPosition: 'center',
+                      backgroundSize: '100%',
+                      width: '25px',
+                      height: '45px'
+                  }}
+                >
+                </Box>
+                <Box
+                  sx={{
+                      backgroundImage: `url(${DiscIcon})`,
+                      backgroundRepeat: 'no-repeat',
+                      backgroundPosition: 'center',
+                      backgroundSize: '100%',
+                      width: '25px',
+                      height: '45px'
+                  }}
+                >
+                </Box>
+              </Stack>
               </IconButton>
             </Tooltip>
             <Menu
