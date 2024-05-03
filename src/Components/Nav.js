@@ -10,11 +10,8 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 import Stack from '@mui/material/Stack';
 import {Link} from 'react-router-dom';
-
-//import CustIcon from './CustIcon';
 import CGIcon from '../Logo/hccas-01.png';
 import GitIcon from '../Logo/github-mark.png';
 import DiscIcon from '../Logo/icon_clyde_black_RGB.png';
@@ -29,9 +26,6 @@ function ResponsiveAppBar() {
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
   };
 
   const handleCloseNavMenu = () => {
@@ -48,7 +42,7 @@ function ResponsiveAppBar() {
         <Toolbar disableGutters>
           <Box
               sx={{
-                  display:{xs:'flex', xs:'none', sm:'none', md:'block', lg:'block'}, mr:1,
+                  display:{xs:'flex', sm:'none', md:'block', lg:'block'}, mr:1,
                   backgroundImage: `url(${CGIcon})`,
                   backgroundRepeat: 'no-repeat',
                   backgroundPosition: 'center',
@@ -120,7 +114,6 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box>
-          {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
           <Box
               sx={{
                   display:{xs:'flex', md:'none'}, mr:1,
