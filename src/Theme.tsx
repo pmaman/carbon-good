@@ -4,6 +4,7 @@ const theme = createTheme({
     palette:{
         primary: {
             main:'#46BD9A',
+            contrastText: "#fff",
         }
     },
     /* need to get the font working still*/
@@ -12,7 +13,7 @@ const theme = createTheme({
             'Inter',
             'Roboto',
         ].join(','),
-    }
+    },
 });
 
 export default theme;

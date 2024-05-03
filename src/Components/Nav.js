@@ -20,7 +20,7 @@ import GitIcon from '../Logo/github-mark.png';
 import DiscIcon from '../Logo/icon_clyde_black_RGB.png';
 
 
-const pages = ['about', 'atlas'];
+const pages = ['about', 'solutions', 'resources', 'atlas'];
 const settings = ['sett1', 'sett2'];
 
 function ResponsiveAppBar() {
@@ -48,6 +48,7 @@ function ResponsiveAppBar() {
         <Toolbar disableGutters>
           <Box
               sx={{
+                  display:{xs:'flex', xs:'none', sm:'none', md:'block', lg:'block'}, mr:1,
                   backgroundImage: `url(${CGIcon})`,
                   backgroundRepeat: 'no-repeat',
                   backgroundPosition: 'center',
@@ -119,7 +120,19 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
+          <Box
+              sx={{
+                  display:{xs:'flex', md:'none'}, mr:1,
+                  backgroundImage: `url(${CGIcon})`,
+                  backgroundRepeat: 'no-repeat',
+                  backgroundPosition: 'center',
+                  backgroundSize: '100%',
+                  width: '25px',
+                  height: '45px'
+              }}
+          >
+          </Box>
           <Typography
             variant="h5"
             noWrap
@@ -145,40 +158,45 @@ function ResponsiveAppBar() {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                <Link style={{textDecoration:'none', color: '#ffffff'}} to={`/${page}`}>{page}</Link>
+                <Link style={{textDecoration:'none', color: '#000'}} to={`/${page}`}>{page}</Link>
               </Button>
             ))}
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+            
               <Stack direction="row" spacing={2}>
-                <Box
-                  sx={{
-                      backgroundImage: `url(${GitIcon})`,
-                      backgroundRepeat: 'no-repeat',
-                      backgroundPosition: 'center',
-                      backgroundSize: '100%',
-                      width: '25px',
-                      height: '45px'
-                  }}
-                >
-                </Box>
-                <Box
-                  sx={{
-                      backgroundImage: `url(${DiscIcon})`,
-                      backgroundRepeat: 'no-repeat',
-                      backgroundPosition: 'center',
-                      backgroundSize: '100%',
-                      width: '25px',
-                      height: '45px'
-                  }}
-                >
-                </Box>
+                <Tooltip title="Link to CarbonGood Discord">
+                < IconButton onClick={() => window.open('https://discord.gg/jBQhq5Xz')} sx={{ p: 0 }}>
+                      <Box
+                        sx={{
+                            backgroundImage: `url(${DiscIcon})`,
+                            backgroundRepeat: 'no-repeat',
+                            backgroundPosition: 'center',
+                            backgroundSize: '100%',
+                            width: '25px',
+                            height: '45px'
+                        }}
+                      >
+                      </Box>
+                    </IconButton>
+                </Tooltip>
+                <Tooltip title="Link to CarbonGood Github">
+                  <IconButton onClick={() => window.open('https://github.com/')} sx={{ p: 0 }}>
+                      <Box
+                        sx={{
+                            backgroundImage: `url(${GitIcon})`,
+                            backgroundRepeat: 'no-repeat',
+                            backgroundPosition: 'center',
+                            backgroundSize: '100%',
+                            width: '25px',
+                            height: '45px'
+                        }}
+                      >
+                      </Box>
+                    </IconButton>
+                  </Tooltip>
               </Stack>
-              </IconButton>
-            </Tooltip>
             <Menu
               sx={{ mt: '45px' }}
               id="menu-appbar"
