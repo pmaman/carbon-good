@@ -20,7 +20,7 @@ import DiscIcon from '../Logo/icon_clyde_black_RGB.png';
 const pages = ['about', 'solutions', 'resources', 'atlas'];
 const settings = ['sett1', 'sett2'];
 
-function ResponsiveAppBar() {
+function Nav() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -37,7 +37,11 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static" >
+    <AppBar 
+      position="static" 
+      sx={{
+        width: '100%',
+      }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Box
@@ -160,7 +164,7 @@ function ResponsiveAppBar() {
             
               <Stack direction="row" spacing={2}>
                 <Tooltip title="Link to CarbonGood Discord">
-                < IconButton onClick={() => window.open('https://discord.gg/jBQhq5Xz')} sx={{ p: 0 }}>
+                <IconButton onClick={() => window.open('https://discord.gg/jBQhq5Xz')} sx={{ p: 0 }}>
                       <Box
                         sx={{
                             backgroundImage: `url(${DiscIcon})`,
@@ -218,4 +222,4 @@ function ResponsiveAppBar() {
     </AppBar>
   );
 }
-export default ResponsiveAppBar;
+export default Nav;

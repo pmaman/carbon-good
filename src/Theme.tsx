@@ -13,7 +13,7 @@ const theme = createTheme({
             'Inter',
             'Roboto',
         ].join(','),
-    },
+    }
 });
 
 export default theme;

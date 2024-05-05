@@ -1,13 +1,13 @@
-import './App.css';
 import { Routes, Route } from "react-router-dom";
-import ResponsiveAppBar from './Components/Nav';
+import Nav from './Components/Nav';
 import About from './Components/About.js';
 import Atlas from './Components/Atlas.js';
+import Box from '@mui/material/Box';
 
 function App() {
   return (
     <>
-      <ResponsiveAppBar />
+      <Nav />
       <Routes>
         <Route path='/about' element={<About />} />
         <Route path='/atlas' element={<Atlas />} />
