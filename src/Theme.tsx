@@ -3,16 +3,35 @@ import { createTheme } from "@mui/material";
 const theme = createTheme({
     palette:{
         primary: {
-            main:'#46BD9A',
-            contrastText: "#fff",
+            main:'#fff',
+            contrastText: "#000",
         }
     },
-    /* need to get the font working still*/
-    typography: {
+    typography:{
         fontFamily: [
             'Inter',
-            'Roboto',
-        ].join(','),
+            'Arial',
+          ].join(','),
+    },
+    components:{
+        MuiContainer:{
+            styleOverrides:{
+                root:{
+                    backgroundColor: '#fff',
+                    // borderBottom: '2px',
+                    // borderColor:'#46BD9A'
+                }
+            }
+        }
+        // MuiAccordion:{
+        //     styleOverrides:{
+        //         root:{
+        //             position:'fixed',
+        //             top:'100px',
+        //             left:'100px'
+        //         }
+        //     }
+        // }
     }
 });
 

@@ -37,16 +37,12 @@ function Nav() {
   };
 
   return (
-    <AppBar 
-      position="static" 
-      sx={{
-        width: '100%',
-      }}>
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
+    <AppBar>
+      <Container maxWidth="x2" >
+        <Toolbar disableGutters >
           <Box
               sx={{
-                  display:{xs:'flex', sm:'none', md:'block', lg:'block'}, mr:1,
+                  display:{xs:'none', sm:'none', md:'block', lg:'block'}, mr:1,
                   backgroundImage: `url(${CGIcon})`,
                   backgroundRepeat: 'no-repeat',
                   backgroundPosition: 'center',
@@ -58,8 +54,9 @@ function Nav() {
           </Box>
           <Box
             sx={{
-              width:'20px',
-              height:'20px',
+              display:{xs:'none', sm:'none', lg:'block'}, mr:1,
+              width:'10px',
+              height:'10px',
             }}
           >
           </Box>
@@ -148,7 +145,7 @@ function Nav() {
           >
             CarbonGood
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex'} }}>
             {pages.map((page) => (
               <Button
                 key={page}
@@ -160,9 +157,8 @@ function Nav() {
             ))}
           </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
-            
-              <Stack direction="row" spacing={2}>
+          <Box sx={{ flexGrow: 1}}>
+              <Stack direction="row" spacing={2} justifyContent="right" >
                 <Tooltip title="Link to CarbonGood Discord">
                 <IconButton onClick={() => window.open('https://discord.gg/jBQhq5Xz')} sx={{ p: 0 }}>
                       <Box
@@ -179,7 +175,7 @@ function Nav() {
                     </IconButton>
                 </Tooltip>
                 <Tooltip title="Link to CarbonGood Github">
-                  <IconButton onClick={() => window.open('https://github.com/')} sx={{ p: 0 }}>
+                  <IconButton onClick={() => window.open('https://github.com/')} >
                       <Box
                         sx={{
                             backgroundImage: `url(${GitIcon})`,

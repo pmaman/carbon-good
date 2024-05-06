@@ -2,7 +2,8 @@ import { Routes, Route } from "react-router-dom";
 import Nav from './Components/Nav';
 import About from './Components/About.js';
 import Atlas from './Components/Atlas.js';
-import Box from '@mui/material/Box';
+//import Box from '@mui/material/Box';
+import './App.css';
 
 function App() {
   return (
