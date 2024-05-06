@@ -1,8 +1,8 @@
 import React, {useState} from 'react'
-import Accordion from '@mui/material/Accordion';
+//import Accordion from '@mui/material/Accordion';
 //import Button from '@mui/material/Button';
 import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
+//import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import Typography from '@mui/material/Typography';
@@ -31,7 +31,7 @@ const StyledList = styled(List)(({ theme }) => ({
 
 export default function FloatingSidebar(layers){
     const [open, setOpen] = useState(false);
-    const [layerlist, setLayerlist] = useState(layers);
+    //const [layerlist, setLayerlist] = useState(layers);
 
     const handleClick = () => {
       setOpen(!open);
@@ -44,11 +44,11 @@ export default function FloatingSidebar(layers){
                     <ListItemText primary="Layers" />
                         {open ? <ExpandLess /> : <ExpandMore />}
                     </ListItemButton>
-                    {layerlist.map((layer) => (
+                    {/* {layerlist.map((layer) => (
                         <ListItemText key={layer}>
                             <Typography textAlign="center">{layer}</Typography>
                         </ListItemText>
-                    ))}
+                    ))} */}
             </StyledList>
         </>
     )
