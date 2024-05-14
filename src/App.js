@@ -1,19 +1,27 @@
-import { Routes, Route } from "react-router-dom";
-import Nav from './Components/Nav';
-import About from './Components/About.js';
-import Atlas from './Components/Atlas.js';
-//import Box from '@mui/material/Box';
+import { Routes, Route } from "react-router-dom"
+import Nav from './Components/Nav'
+import About from './Components/About.js'
+import Atlas from './Components/Atlas.js'
+import Solutions from './Components/Solutions.js'
+import Resources from './Components/Resources.js'
+import Grid from '@mui/material/Grid'
 import './App.css';
 
 function App() {
   return (
-    <>
-      <Nav />
-      <Routes>
-        <Route path='/about' element={<About />} />
-        <Route path='/atlas' element={<Atlas />} />
-      </Routes>
-    </>
+    <Grid container>
+      <Grid item>
+        <Nav />
+      </Grid>
+      <Grid item>
+        <Routes>
+          <Route path='/about' element={<About />} />
+          <Route path='/solutions' element={<Solutions />} />
+          <Route path='/resources' element={<Resources />} />
+          <Route path='/atlas' element={<Atlas />} />
+        </Routes>
+      </Grid>
+    </Grid>
   );
 }
 
