@@ -9,19 +9,19 @@ import './App.css';
 
 function App() {
   return (
-    <Grid container>
-      <Grid item>
-        <Nav />
+      <Grid container>
+        <Grid item>
+          <Nav />
+        </Grid>
+        <Grid item>
+          <Routes>
+            <Route path='/about' element={<About />} />
+            <Route path='/solutions' element={<Solutions />} />
+            <Route path='/resources' element={<Resources />} />
+            <Route path='/atlas' element={<Atlas />} />
+          </Routes>
+        </Grid>
       </Grid>
-      <Grid item>
-        <Routes>
-          <Route path='/about' element={<About />} />
-          <Route path='/solutions' element={<Solutions />} />
-          <Route path='/resources' element={<Resources />} />
-          <Route path='/atlas' element={<Atlas />} />
-        </Routes>
-      </Grid>
-    </Grid>
   );
 }
 

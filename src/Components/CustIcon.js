@@ -1,6 +1,6 @@
 import React from 'react'
 import Box from '@mui/material/Box';
-import logo from '../Logo/hccas-01.png';
+import logo from '../Logo/CG Logo.png';
 
 export default function CustIcon() {
   return (

@@ -12,7 +12,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import Stack from '@mui/material/Stack';
 import {Link} from 'react-router-dom';
-import CGIcon from '../Logo/hccas-01.png';
+import CGIcon from '../Logo/CG Logo.png';
 import GitIcon from '../Logo/github-mark.png';
 import DiscIcon from '../Logo/icon_clyde_black_RGB.png';
 
@@ -47,8 +47,9 @@ function Nav() {
                   backgroundRepeat: 'no-repeat',
                   backgroundPosition: 'center',
                   backgroundSize: '100%',
-                  width: '25px',
-                  height: '45px'
+                  width: '45px',
+                  height: '45px',
+                  borderRadius:'0px'
               }}
           >
           </Box>
@@ -68,7 +69,7 @@ function Nav() {
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex', lg: 'flex' },
-              fontFamily: 'monospace',
+              //fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
               color: 'inherit',
@@ -133,6 +134,7 @@ function Nav() {
             noWrap
             component="a"
             href="/about"
+            className="nav-list"
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
@@ -142,7 +144,7 @@ function Nav() {
               letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none',
-              textAlign: 'center'
+              textAlign: 'left'
             }}
           >
             CarbonGood
