@@ -1,3 +1,4 @@
+import { BorderBottom } from "@mui/icons-material";
 import { createTheme } from "@mui/material";
 import { styled } from '@mui/system';
 
@@ -52,9 +53,39 @@ const theme = createTheme({
                 }
             },
         },
-        MuiButton:{
+        MuiTabs:{
             styleOverrides:{
                 root:{
+                    display: 'flex',
+                    justifyContent: 'center',
+                },
+                flexContainer:{
+                    justifyContent:'center'
+                }
+            }
+        },
+        MuiTab:{
+            styleOverrides:{
+                root:{
+                    borderBottom: '4px solid #ffffff', // Border bottom stroke for active tab
+                    '&.Mui-selected': {
+                    color: '#3B9D95', // Active tab color
+                    borderBottom: '4px solid #3B9D95', // Border bottom stroke for active tab
+                    }
+                }
+            }
+        },
+        MuiButtonBase:{
+            styleOverrides:{
+                root:{
+                    // justifyContent:'space-between',                    
+                    // '&.Mui-selected': {
+                    //     borderBottom:'2px', //TODO - center tabs and get border rendering properly
+                    //     borderColor:'#3B9D95',
+                    //     backgroundColor: '#3B9D95',
+                    //     borderRadius:'5px 5px 0px 0px',
+                    //     opacity:1,
+                    // }
                 }
             }
         },
@@ -95,11 +126,6 @@ const theme = createTheme({
             }
         }
     }
-    // media: {
-    //     height: 'auto',
-    //     width: '100%',
-    //     //objectFit: 'cover'
-    // }
 });
 
 export default theme;

@@ -5,23 +5,30 @@ import Atlas from './Components/Atlas.js'
 import Solutions from './Components/Solutions.js'
 import Resources from './Components/Resources.js'
 import Grid from '@mui/material/Grid'
+import { ThemeProvider } from '@mui/material'
+
+import theme, {MuiImg} from './Theme.tsx'
+
+
 import './App.css';
 
 function App() {
   return (
-      <Grid container>
-        <Grid item>
-          <Nav />
+    <ThemeProvider theme={theme}>
+        <Grid container>
+          <Grid item sm={12}>
+            <Nav />
+          </Grid>
+          <Grid item sm={12}>
+            <Routes>
+              <Route path='/about' element={<About />} />
+              <Route path='/solutions' element={<Solutions />} />
+              <Route path='/resources' element={<Resources />} />
+              <Route path='/atlas' element={<Atlas />} />
+            </Routes>
+          </Grid>
         </Grid>
-        <Grid item>
-          <Routes>
-            <Route path='/about' element={<About />} />
-            <Route path='/solutions' element={<Solutions />} />
-            <Route path='/resources' element={<Resources />} />
-            <Route path='/atlas' element={<Atlas />} />
-          </Routes>
-        </Grid>
-      </Grid>
+      </ThemeProvider>
   );
 }
 

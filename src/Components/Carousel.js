@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import IconButton from '@mui/material/IconButton';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
-import { Box, Grid, Stack, Typography, createTheme, ThemeProvider } from "@mui/material";
+import { Grid, Stack, Typography, createTheme, ThemeProvider } from "@mui/material";
 import "./Carousel.css";
 import theme, {MuiImg} from '../Theme.tsx'
 
@@ -93,13 +93,7 @@ export default function Carousel({data}){
                                     <MuiImg
                                         src={data[currentIndex].img} 
                                         alt="process image"
-                                        sx={{width:"50%"}}
-                                        >
-                                    </MuiImg>
-                                    <MuiImg
-                                        src={data[currentIndex+1].img} 
-                                        alt="process image"
-                                        sx={{width:"50%"}}
+                                        sx={{width:"100%"}}
                                         >
                                     </MuiImg>
                                 </Stack>
