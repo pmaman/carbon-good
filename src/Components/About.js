@@ -5,11 +5,20 @@ import globeIcon from '../Logo/Globe.png'
 import { Tabs, Tab, Paper, Stack, Button, Typography, ThemeProvider } from '@mui/material'
 import theme, {MuiImg} from '../Theme.tsx'
 import harvestImg from "../images/Harvest-v4.png"
-import Carousel from './Carousel'
-import imgData from './imgData'
+import diffuserImg from "../images/diffuser.png"
+import commGdn from "../images/commGdn2.png"
 import PageTabs from './PageTabs.js'
+import { useNavigate } from 'react-router-dom';
+
 
 export default function About() {
+
+  const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    navigate('/atlas');
+  };
+
   return (
     <ThemeProvider theme = {theme}>
       <Grid 
@@ -25,7 +34,23 @@ export default function About() {
                       fontSize:"3rem",
                       padding:'30px'
                   }}>
-                  About The Project
+                  Hydroponic Carbon Capture Anywhere, Simply
+              </Typography>
+              <Typography
+                  sx={{
+                    variant:"h2",
+                    fontSize:"2rem",
+                  }}
+              >
+                A new CCS for anywhere conventional solutions can and can't go. 
+              </Typography>
+              <Typography
+                  sx={{
+                    variant:"h3",
+                    fontSize:"1.5rem",
+                  }}
+              >
+                CarbonGood economically converts CO2 to biomass at massive scale in a fraction of the area normally required.
               </Typography>
           </Grid>
           <Grid item xs={12} sx={{mt:'50px', mb:'50px'}}> 
@@ -75,7 +100,7 @@ export default function About() {
                   variant="contained" 
                   color="secondary"
                   startIcon={<img src={discordIcon} height="20px" width="auto"></img>}
-
+                  onClick={() => window.open('https://discord.gg/jBQhq5Xz')}
                 >
                   Join The Discussion 
                 </Button>
@@ -86,7 +111,7 @@ export default function About() {
                   spacing={2}
                 >
                   <MuiImg
-                    src={harvestImg} 
+                    src={commGdn} 
                     alt="harvest image"
                     sx={{
                       width:'100%',
@@ -107,7 +132,7 @@ export default function About() {
                     variant="contained" 
                     color="secondary"
                     startIcon={<img src={globeIcon} height="20px" width="auto" color="#ffffff"></img>}
-
+                    onClick ={handleNavigate}
                   >
                     Explore The Atlas                  
                   </Button>

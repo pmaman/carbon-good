@@ -21,6 +21,7 @@ function App() {
           </Grid>
           <Grid item sm={12}>
             <Routes>
+              <Route path='/' element={<About />} />
               <Route path='/about' element={<About />} />
               <Route path='/solutions' element={<Solutions />} />
               <Route path='/resources' element={<Resources />} />

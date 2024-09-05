@@ -1,7 +1,13 @@
 import React, { useState } from 'react';
-import { Tabs, Tab, Box, Typography, Paper } from '@mui/material';
+import { Tabs, Tab, Box, Typography, Paper, ThemeProvider } from '@mui/material';
+import theme, {MuiImg} from '../Theme.tsx'
+import harvestImg from "../images/Harvest-v4.png"
+import diffuserImg from "../images/diffuser.png"
+import commGdn from "../images/commGdn2.png"
 import Carousel from './Carousel'
-import imgData from './imgData'
+import howImgData from './howImgData.js'
+import whatImgData from './whatImgData.js'
+import whyImgData from './whyImgData.js'
 
 
 function TabPanel(props) {
@@ -38,29 +44,32 @@ function PageTabs() {
     }
     
   return (
-    <Paper
-        sx={{
-            padding:"20px"
-        }}
-    >
-        <Tabs 
-            value={value} 
-            onChange={handleChange}
-        >   
-            <Tab label="What Is Carbon Good?" />
-            <Tab label="How Does It Work?" />
-            <Tab label="Why Do We Need It?" />
-        </Tabs>
-        <TabPanel value={value} index={0}>
-            <Carousel data={imgData}/>
-        </TabPanel>
-        <TabPanel value={value} index={1}>
-            <Carousel data={imgData}/>
-        </TabPanel>
-        <TabPanel value={value} index={2}>
-            <Carousel data={imgData}/>   
-        </TabPanel>
-    </Paper>
+    <ThemeProvider theme= {theme}>
+      <Paper
+          sx={{
+              padding:"20px"
+          }}
+      >
+          <Tabs 
+              value={value} 
+              onChange={handleChange}
+          >   
+              <Tab label="What Is Carbon Good?" />
+              <Tab label="How Does It Work?" />
+              <Tab label="Why Do We Need It?" />
+          </Tabs>
+          <TabPanel value={value} index={0}>
+            <Carousel data={whatImgData}/>
+          </TabPanel>
+          <TabPanel value={value} index={1}>
+            <Carousel data={whyImgData}/>
+          </TabPanel>
+          <TabPanel value={value} index={2}>
+            <Carousel data={howImgData}/>   
+          </TabPanel>
+      </Paper>
+    </ThemeProvider>
+
   )
 }
 

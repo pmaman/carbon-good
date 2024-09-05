@@ -39,11 +39,11 @@ export default function Carousel({data}){
 
     //Next & Prev Func
     const handleNext= () =>{
-        setCurrentIndex((prevIndex) => (prevIndex+1)%data.length)
+        setCurrentIndex((prev) => prev > 0 ? prev - 1 : data.length - 1)
     }
 
     const handlePrev= () =>{
-        setCurrentIndex((prevIndex) => (prevIndex-1)%data.length)
+        setCurrentIndex((prev) => (prev < data.length - 1 ? prev + 1 : 0))
     }
 
 
@@ -92,8 +92,8 @@ export default function Carousel({data}){
                                 <Stack direction="row" spacing={2}>
                                     <MuiImg
                                         src={data[currentIndex].img} 
-                                        alt="process image"
-                                        sx={{width:"100%"}}
+                                        alt={data[currentIndex].title} 
+                                        sx={{width:"750px"}}
                                         >
                                     </MuiImg>
                                 </Stack>
