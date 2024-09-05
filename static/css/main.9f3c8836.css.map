@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.9f3c8836.css","mappings":"AAAA,iBAEG,MAAM,CADN,cAAe,CAEf,KACH","sources":["App.css"],"sourcesContent":[".mapboxgl-canvas{\r\n   position: fixed;\r\n   left:0;\r\n   top:0;\r\n}\r\n\r\n/* *{\r\n   margin: 0;\r\n}  */"],"names":[],"sourceRoot":""}
