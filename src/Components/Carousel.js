@@ -83,7 +83,7 @@ export default function Carousel({data}){
                             {data[currentIndex].title ?? "There is no title for this image."}
                         </Typography>
                     </Grid>
-                    <Grid item xs={12} /*sx={{mt:'1000px' justifyContent:'space-between', alignItems:'center'}}*/>
+                    <Grid item xs={12}>
                         <Stack direction="row" spacing={3}>
                             <IconButton onClick={handlePrev}>
                                 <ArrowBackIosNewIcon fontSize="large"/>

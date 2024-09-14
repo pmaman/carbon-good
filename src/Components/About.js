@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import Grid from '@mui/material/Grid'
 import discordIcon from '../Logo/icon_clyde_white_RGB.png'
 import globeIcon from '../Logo/Globe.png'
-import { Tabs, Tab, Paper, Stack, Button, Typography, ThemeProvider } from '@mui/material'
+import { Tabs, Tab, Paper, Stack, Button, Typography, styled, ThemeProvider } from '@mui/material'
 import theme, {MuiImg} from '../Theme.tsx'
 import harvestImg from "../images/Harvest-v4.png"
 import diffuserImg from "../images/diffuser.png"
@@ -18,6 +18,11 @@ export default function About() {
   const handleNavigate = () => {
     navigate('/atlas');
   };
+
+  const StyledDiv = styled('div')(({ theme }) => ({
+    position:'sticky !important',
+    top:'100px !important'
+  }));
 
   return (
     <ThemeProvider theme = {theme}>
@@ -140,9 +145,10 @@ export default function About() {
               </Stack>
             </Stack>
           </Grid>
-          <Grid item xs={12}>
-            <PageTabs /> 
-          </Grid>
+          {/* <StyledDiv> */}
+            {/* <Grid item xs={12} sx ={{position:'relative'}}> */}
+            <PageTabs/> 
+            {/* </Grid> */}
         </Grid>
       </Grid>
     </ThemeProvider>

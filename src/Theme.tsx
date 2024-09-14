@@ -1,5 +1,6 @@
 import { BorderBottom } from "@mui/icons-material";
 import { createTheme } from "@mui/material";
+import zIndex from "@mui/material/styles/zIndex";
 import { styled } from '@mui/system';
 
 export const MuiImg = styled('img')(({ theme }) => ({
@@ -29,13 +30,6 @@ const theme = createTheme({
           ].join(','),
     },
     components:{
-        MuiContainer:{
-            styleOverrides:{
-                root:{
-                    //backgroundColor: '#fff'
-                }
-            }
-        },
         MuiGrid:{
             styleOverrides: {
                 root: {
@@ -43,13 +37,16 @@ const theme = createTheme({
                     justifyContent:'center',
                     alignItems:'center',
                     margin:'0',
-                    paddingLeft:'0px !important'
+                    paddingLeft:'0px !important',
+                    //position:'relative' 
                 },
                 item:{
-                    padding:'0px'
+                    padding:'0px',
+                    //position:'relative'
                 },
                 container:{
-                    padding:'0px'
+                    padding:'0px',
+                    //position:'relative'
                 }
             },
         },
@@ -58,10 +55,14 @@ const theme = createTheme({
                 root:{
                     display: 'flex',
                     justifyContent: 'center',
+                    position:'sticky',
+                    top: "0px",
+                    zIndex:1000
                 },
                 flexContainer:{
                     justifyContent:'center'
-                }
+                },
+
             }
         },
         MuiTab:{
@@ -95,7 +96,7 @@ const theme = createTheme({
                     borderRadius:'10px',
                     justifyContent:'center',
                     alignItems:'center',
-                    paddingBottom:'20px',
+                    paddingBottom:'20px'
                     //boxShadow: '2px 4px 4px 0px rgba(0, 0, 0, 0.15)'
                 }
             }
@@ -105,7 +106,8 @@ const theme = createTheme({
                 root:{
                     borderRadius:'0px',
                     margin:'0px',
-                    padding:'0px'
+                    padding:'0px',
+                    zIndex: 999
                 }
             }
         },
