@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/carbon-good/static/css/main.9f3c8836.css",
+    "main.js": "/carbon-good/static/js/main.8fb6a905.js",
+    "static/media/commGdn2.png": "/carbon-good/static/media/commGdn2.28cf5c5f653cc9a18ee4.png",
+    "static/media/Harvest-v4.png": "/carbon-good/static/media/Harvest-v4.b2befbb319e4df75e3cf.png",
+    "static/media/biochar.png": "/carbon-good/static/media/biochar.a3fc676893b2904d69ce.png",
+    "static/media/Dac.png": "/carbon-good/static/media/Dac.b2a01e5761e90d087bf1.png",
+    "static/media/grass.png": "/carbon-good/static/media/grass.613871628a3c5f2c3471.png",
+    "static/media/diffuser.png": "/carbon-good/static/media/diffuser.3ffe4324386dbdb8a815.png",
+    "static/media/emissions.png": "/carbon-good/static/media/emissions.0528642648fdb3f8fc03.png",
+    "static/media/wheatgrass 1.png": "/carbon-good/static/media/wheatgrass 1.43949aa27d160cf53114.png",
+    "static/media/icon_clyde_black_RGB.png": "/carbon-good/static/media/icon_clyde_black_RGB.f33f7d9fc07e1d074064.png",
+    "index.html": "/carbon-good/index.html",
+    "main.9f3c8836.css.map": "/carbon-good/static/css/main.9f3c8836.css.map",
+    "main.8fb6a905.js.map": "/carbon-good/static/js/main.8fb6a905.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9f3c8836.css",
+    "static/js/main.8fb6a905.js"
+  ]
+}
