@@ -8,6 +8,7 @@ import harvestImg from "../images/Harvest-v4.png"
 import Carousel from './Carousel'
 import imgData from './imgData'
 import PageTabs from './PageTabs.js'
+import YouTubeEmbedWithPreview from './YouTubeEmbedWithPreview.js'
 
 export default function About() {
   return (
@@ -15,7 +16,7 @@ export default function About() {
       <Grid 
         container
         mt={10}
-        sx={{minWidth: "100%"}}
+        sx={{minWidth: "100%", justifyContent:'center', alignItems:'center'}}
       >
         <Grid item xs={12}> 
           <Grid item xs={12}>
@@ -28,18 +29,28 @@ export default function About() {
                   About The Project
               </Typography>
           </Grid>
-          <Grid item xs={12} sx={{mt:'50px', mb:'50px'}}> 
-            <iframe
-              width="100%" 
-              height="300px"
-              src="https://www.youtube.com/embed/vkteemwYEvw?si=niZIqchOlHJuw363&amp;controls=0"
-              title="CarbonGood MIT SOLVE" 
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-              referrerpolicy="strict-origin-when-cross-origin" 
-              //allowfullscreen
-              > 
-            </iframe>
+          <Grid item xs={12} sx={{width: '100%', maxWidth: '800px', display: 'flex', justifyContent:'center', alignItems:'center'}}> 
+            {/* <YouTubeEmbedWithPreview /> */}
+            <div style={{ position: 'relative', paddingBottom: '56.25%%', width: '100%' }}>
+              <iframe
+                style={{
+                    position: 'relative',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    border: '0',
+                    objectFit:'cover'
+                }}
+                src="https://www.youtube.com/embed/vkteemwYEvw?si=niZIqchOlHJuw363&amp;modestbranding=1&amp;rel=0&amp;controls=1"
+                title="CarbonGood MIT SOLVE" 
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen
+                > 
+              </iframe>           
+            </div>
           </Grid>
           <Grid 
             item xs={12}
@@ -115,8 +126,8 @@ export default function About() {
               </Stack>
             </Stack>
           </Grid>
-          <Grid item xs={12}>
-            <PageTabs /> 
+          <Grid item xs={12} sx ={{position:'sticky', top:'95px', zIndex:999}}>
+            <PageTabs/> 
           </Grid>
         </Grid>
       </Grid>

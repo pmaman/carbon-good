@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Tabs, Tab, Box, Typography, Paper } from '@mui/material';
+import { Tabs, Tab, Box, Typography } from '@mui/material';
 import Carousel from './Carousel'
 import imgData from './imgData'
 
@@ -15,7 +15,7 @@ function TabPanel(props) {
         {...other}
       >
         {value === index && (
-          <Box sx={{ p: 3 }}>
+          <Box sx={{ p: 3}}>
             <Typography
                 sx={{
                     variant:"p",
@@ -38,29 +38,25 @@ function PageTabs() {
     }
     
   return (
-    <Paper
-        sx={{
-            padding:"20px"
-        }}
-    >
-        <Tabs 
-            value={value} 
-            onChange={handleChange}
-        >   
-            <Tab label="What Is Carbon Good?" />
-            <Tab label="How Does It Work?" />
-            <Tab label="Why Do We Need It?" />
-        </Tabs>
-        <TabPanel value={value} index={0}>
-            <Carousel data={imgData}/>
-        </TabPanel>
-        <TabPanel value={value} index={1}>
-            <Carousel data={imgData}/>
-        </TabPanel>
-        <TabPanel value={value} index={2}>
-            <Carousel data={imgData}/>   
-        </TabPanel>
-    </Paper>
+    <>
+      <Tabs 
+          value={value} 
+          onChange={handleChange}
+          >   
+          <Tab label="What Is Carbon Good?" />
+          <Tab label="How Does It Work?" />
+          <Tab label="Why Do We Need It?" />
+      </Tabs>
+      <TabPanel value={value} index={0}>
+          <Carousel data={imgData}/>
+      </TabPanel>
+      <TabPanel value={value} index={1}>
+          <Carousel data={imgData}/>
+      </TabPanel>
+      <TabPanel value={value} index={2}>
+          <Carousel data={imgData}/>   
+      </TabPanel>
+    </>
   )
 }
 

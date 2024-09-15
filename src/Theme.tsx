@@ -1,4 +1,3 @@
-import { BorderBottom } from "@mui/icons-material";
 import { createTheme } from "@mui/material";
 import { styled } from '@mui/system';
 
@@ -49,7 +48,8 @@ const theme = createTheme({
                     padding:'0px'
                 },
                 container:{
-                    padding:'0px'
+                    padding:'0px',
+                    position:'relative'
                 }
             },
         },
@@ -58,6 +58,10 @@ const theme = createTheme({
                 root:{
                     display: 'flex',
                     justifyContent: 'center',
+                    position:'sticky',
+                    top:'68.5px',
+                    zIndex:1000,
+                    backgroundColor:'#ffffff'
                 },
                 flexContainer:{
                     justifyContent:'center'

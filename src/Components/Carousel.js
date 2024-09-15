@@ -1,32 +1,12 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import IconButton from '@mui/material/IconButton';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
-import { Grid, Stack, Typography, createTheme, ThemeProvider } from "@mui/material";
+import { Grid, Stack, Typography, ThemeProvider } from "@mui/material";
 import "./Carousel.css";
 import theme, {MuiImg} from '../Theme.tsx'
 
-// const theme = createTheme => ({
-//     components: {
-//         MuiGrid: {
-//             styleOverrides: {
-//                 root: {
-//                     width:'100%'
-//                 },
-//             },
-//         },
-//     },
-//     Media: {
-//         height: 'auto',
-//         width: '100%',
-//         //objectFit: 'cover'
-//     }
-// });
-
-//console.log('Theme', theme);
-
 export default function Carousel({data}){
-    //console.log(data);
     const [currentIndex,setCurrentIndex] = useState(0);
 
     //auto play functionality

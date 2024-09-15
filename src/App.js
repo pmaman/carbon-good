@@ -6,8 +6,7 @@ import Solutions from './Components/Solutions.js'
 import Resources from './Components/Resources.js'
 import Grid from '@mui/material/Grid'
 import { ThemeProvider } from '@mui/material'
-
-import theme, {MuiImg} from './Theme.tsx'
+import theme from './Theme.tsx'
 
 
 import './App.css';
