@@ -19,11 +19,11 @@ export default function Carousel({data}){
 
     //Next & Prev Func
     const handleNext= () =>{
-        setCurrentIndex((prevIndex) => (prevIndex+1)%data.length)
+        setCurrentIndex((prev) => prev > 0 ? prev - 1 : data.length - 1)
     }
 
     const handlePrev= () =>{
-        setCurrentIndex((prevIndex) => (prevIndex-1)%data.length)
+        setCurrentIndex((prev) => (prev < data.length - 1 ? prev + 1 : 0))
     }
 
 
@@ -63,7 +63,7 @@ export default function Carousel({data}){
                             {data[currentIndex].title ?? "There is no title for this image."}
                         </Typography>
                     </Grid>
-                    <Grid item xs={12} /*sx={{mt:'1000px' justifyContent:'space-between', alignItems:'center'}}*/>
+                    <Grid item xs={12}>
                         <Stack direction="row" spacing={3}>
                             <IconButton onClick={handlePrev}>
                                 <ArrowBackIosNewIcon fontSize="large"/>
@@ -72,8 +72,8 @@ export default function Carousel({data}){
                                 <Stack direction="row" spacing={2}>
                                     <MuiImg
                                         src={data[currentIndex].img} 
-                                        alt="process image"
-                                        sx={{width:"100%"}}
+                                        alt={data[currentIndex].title} 
+                                        sx={{width:"750px"}}
                                         >
                                     </MuiImg>
                                 </Stack>
